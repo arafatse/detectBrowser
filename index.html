@@ -1,1 +1,15 @@
-"<script></script>" 
+<script>
+  var b, ua = navigator.userAgent,
+      ba = ["Chrome", "Firefox", "Safari", "MSIE", "Trident", "Edge"];
+  for(var i=0;i<ba.length;i++){
+    if(ua.indexOf(ba[i]) > -1){
+      b = ba[i];
+      break;
+    };
+  };
+  if(b == "MSIE" || b == "Trident" || b == "Edge"){
+    b = "Internet Explorer";
+  };
+  alert(b);
+  document.write(ua)
+</script>
